@@ -35,6 +35,33 @@ namespace CuboBRO
             dwvVentas.DataSource = sqlDB.DataSetSQL("SELECT * FROM vVentas ORDER BY id_venta").Tables[0];//obtener los datos de la vista vVentas
         }
 
-       
+        private void btnVaciarAlmacen_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Se eliminarán todos los registros de la base de datos", "Vaciar Almacen", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+
+            if (result == DialogResult.Yes)
+            {
+                //limpiamos los DataWridViews 
+                dwvTiendas.DataSource = null;
+                dwvTiendas.Refresh();
+
+                dwvProductos.DataSource = null;
+                dwvProductos.Refresh();
+
+                dwvTiempo.DataSource = null;
+                dwvTiempo.Refresh();
+
+                dwvVentas.DataSource = null;
+                dwvVentas.Refresh();
+
+                //Eliminamos todos los registros del almacen con un procedimiento almacenmado
+                SQL sqlDB = new SQL();
+                var var = sqlDB.EjecutaSQLScalar("exec VaciarAlmacen");
+            }
+
+                    
+            
+        }
     }
 }

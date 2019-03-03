@@ -42,6 +42,7 @@ namespace CuboBRO
             dsSoriana = frmCargarDatos.dsSoriana; pb(20);
 
             TransformacionCargaDatosNeto(dsNeto);
+            TransformacionCargaDatosBodegaAurrera(dsBodega);
             pb(100);
             //this.Close();
                         
@@ -102,8 +103,11 @@ namespace CuboBRO
                             sql = "insert into hechosVentas(id_venta,id_tienda,id_tiempo,id_producto,unidades,precio) " +
                                                     " values(" + id_venta + "," + id_tienda + "," + id_tiempo + "," + id_producto + "," + cantidad + "," + precio + ")"; //REGISTRA LA VENTA
                             sqlBD.EjecutaSQLComando(sql);
+                            ID_PRODUCTO++; //incrementamos la variable global
                         }
                     }
+                    ID_TIEMPO++;//incrementamos la variable global
+                    ID_VENTA++;//incrementamos la variable global
                 }
             }
             pb(90);
@@ -133,7 +137,7 @@ namespace CuboBRO
                 for (int i = 0; i < dsBodega.Tables[0].Rows.Count; i++)
                 {
                     id_tiempo = i;
-                    id_venta = IDVENTA;
+                    id_venta = ID_VENTA;
                     var valor = dsBodega.Tables[0].Rows[i][5 + i].ToString();
                     hora = "12:00:00"; // se pone esta hora porque los datos de Bodega Aurrera los omitio
                     venta = float.Parse(dsBodega.Tables[0].Rows[i][4].ToString());

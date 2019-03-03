@@ -86,7 +86,7 @@ namespace CuboBRO
         /// <param name="sComandoSql">Comando SQL</param> 
         public string EjecutaSQLScalar(string sComandoSql)
         {
-            string regreso = "";
+            var regreso = "0";
             SqlConnection sqlConn = new SqlConnection();
             SqlCommand sqlCom = new SqlCommand();
             try
@@ -95,7 +95,8 @@ namespace CuboBRO
                 sqlConn.Open();
                 sqlCom.Connection = sqlConn;
                 sqlCom.CommandText = sComandoSql;
-                regreso = sqlCom.ExecuteScalar().ToString();
+                sqlCom.ExecuteScalar();
+                regreso = "1";
             }
             catch (Exception error)
             {
@@ -106,7 +107,7 @@ namespace CuboBRO
             {
                 sqlConn.Close();
             }
-            return regreso;
+            return  regreso;
         }
         /// <summary> 
         /// Esta Función Sirve para llenar GridsView y Combos 

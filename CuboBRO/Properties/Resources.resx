@@ -136,6 +136,9 @@
   <data name="proceso ETL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\proceso ETL.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="texto2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\texto2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pandas_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pandas_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,7 +148,7 @@
   <data name="esquema" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\esquema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="texto2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\texto2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="basura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
