@@ -32,17 +32,24 @@ namespace CuboBRO
         }
 
         void ExtraccionDatos() {
-            
+
             frmCargarDatos frmCargarDatos = new frmCargarDatos(); pb(2);
-            DataSet dsNeto = new DataSet(); 
+            DataSet dsNeto = new DataSet();
             DataSet dsBodega = new DataSet();
             DataSet dsSoriana = new DataSet();
             dsNeto = frmCargarDatos.dsNeto; pb(10);
             dsBodega = frmCargarDatos.dsBodega; pb(15);
             dsSoriana = frmCargarDatos.dsSoriana; pb(20);
-
-            TransformacionCargaDatosNeto(dsNeto);
-            TransformacionCargaDatosBodegaAurrera(dsBodega);
+            if ((dsNeto.Tables.Count != 0)&&(dsBodega.Tables.Count != 0) && (dsSoriana.Tables.Count != 0)) {//verifica si tiene datos, se hace la carga.
+                TransformacionCargaDatosNeto(dsNeto); 
+                TransformacionCargaDatosBodegaAurrera(dsBodega);
+            }
+            else
+            {
+                MessageBox.Show("No hay datos, se redireccionará a cargarlos","NO HAY DATOS QUE PROCESAR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Close();
+                frmCargarDatos.Show();
+            }
             pb(100);
             //this.Close();
                         
@@ -136,11 +143,11 @@ namespace CuboBRO
                 var producto = "";
                 for (int i = 0; i < dsBodega.Tables[0].Rows.Count; i++)
                 {
-                    id_tiempo = i;
+                    id_tiempo = ID_TIEMPO + i+1;
                     id_venta = ID_VENTA;
-                    var valor = dsBodega.Tables[0].Rows[i][5 + i].ToString();
+                    //var valor = dsBodega.Tables[0].Rows[i][5 + i].ToString();
                     hora = "12:00:00"; // se pone esta hora porque los datos de Bodega Aurrera los omitio
-                    venta = float.Parse(dsBodega.Tables[0].Rows[i][4].ToString());
+                    //venta = float.Parse(dsBodega.Tables[0].Rows[i][4].ToString());
 
                     sql = "insert into dimTiempo(id_tiempo,fecha,hora) values(" + id_tiempo + ",'2019/02/14','" + hora + "')"; //REGISTRA LA FECHA
                     sqlBD.EjecutaSQLComando(sql);
