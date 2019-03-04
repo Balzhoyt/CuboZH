@@ -51,8 +51,9 @@ namespace CuboBRO
             dsSoriana = frmCargarDatos.dsSoriana; pb(20);
             if ((dsNeto.Tables.Count != 0) && (dsBodega.Tables.Count != 0) && (dsSoriana.Tables.Count != 0))
             {//verifica si tiene datos, se hace la carga.
-                TransformacionCargaDatosNeto(dsNeto); pb(50);
-                TransformacionCargaDatosBodegaAurrera(dsBodega); pb(70);
+                TransformacionCargaDatosNeto(dsNeto); pb(40);
+                TransformacionCargaDatosBodegaAurrera(dsBodega); pb(50);
+                TransformacionCargaDatosSoriana(dsSoriana); pb(80);
             }
             else
             {
@@ -193,19 +194,85 @@ namespace CuboBRO
                                 sql = "insert into hechosVentas(id_venta,id_tienda,id_tiempo,id_producto,unidades,precio) " +
                                                   " values(" + id_venta + "," + id_tienda + "," + id_tiempo + "," + id_producto + "," + unidades + "," + precio + ")"; //REGISTRA LA VENTA
                                 sqlBD.EjecutaSQLComando(sql);
+                                ID_VENTA++;
+                                ID_TIEMPO++;
 
                             }
 
 
                         }
 
-
+                        
                     }
-                    ID_VENTA++;
+                
 
                 }
             }
         
+        }
+
+        void TransformacionCargaDatosSoriana(DataSet dsSoriana)
+        {
+            int id_tienda = 2;
+            ID_PRODUCTO = ID_PRODUCTO + 5;
+            int id_producto = ID_PRODUCTO;
+            int id_venta = ID_VENTA;
+            int id_tiempo = ID_TIEMPO+500;
+            string sql;
+            string registrarVenta = "";
+
+            SQL sqlBD = new SQL();
+            //Registramos la tienda en la base de datos
+            if (!sqlBD.Existe(id_tienda, "SELECT COUNT(*) FROM dimTienda WHERE id_tienda = @Id"))//comrueba si el producto exite para ya no agregarlo
+            {
+                sql = "insert into dimTienda(id_tienda,nombre) values(" + id_tienda + ",'Soriana') ";
+                sqlBD.EjecutaSQLComando(sql);
+
+                //leer las columnas del dataset para tratar los productos
+                var hora = "";
+                var unidades = 0.0;
+                var precio = 0.0;
+                var cantidad = 0.0;
+                var producto = "";
+                for (int i = 0; i < dsSoriana.Tables[0].Rows.Count; i++) //recorre la filas
+                {
+                    id_tiempo++;
+                    hora = "12:00:00"; // se pone esta hora porque los datos de Bodega Aurrera los omitió
+                    sql = "insert into dimTiempo(id_tiempo,fecha,hora) values(" + id_tiempo + ",'2019/02/14','" + hora + "')"; //REGISTRA LA FECHA
+                    sqlBD.EjecutaSQLComando(sql);
+                    producto = dsSoriana.Tables[0].Rows[i][3].ToString();
+                    id_producto++;
+                    id_venta = Int32.Parse(dsSoriana.Tables[0].Rows[i][0].ToString())+ID_VENTA;
+                    precio = double.Parse(dsSoriana.Tables[0].Rows[i][4].ToString());
+                    cantidad= double.Parse(dsSoriana.Tables[0].Rows[i][2].ToString());
+                    //if (!sqlBD.Existe(producto, "SELECT COUNT(*) FROM dimProducto WHERE nombre = @Id"))//comrueba si el producto exite para ya no agregarlo
+                    // {
+                        sql = "insert into dimProducto(id_producto,nombre,categoria) values(" + id_producto + ",'" + producto + "','varios')";// REGISTRA EL PRODUCTO
+                        sqlBD.EjecutaSQLComando(sql);
+                        unidades = 1;
+                      // ID_PRODUCTO++;
+                    //}
+                    /*
+                    else
+                     {
+                        unidades++;
+                        sql = "update hechosVentas set unidades=" + unidades + " where id_venta=" + id_venta; //si ya existe el producto en la misma venta, actualiza la cantidad
+                        sqlBD.EjecutaSQLComando(sql);
+                        ID_PRODUCTO--;
+                    }
+                    */
+                    sql = "insert into hechosVentas(id_venta,id_tienda,id_tiempo,id_producto,unidades,precio) " +
+                                                  " values(" + id_venta + "," + id_tienda + "," + id_tiempo + "," + id_producto + "," + cantidad + "," + precio + ")"; //REGISTRA LA VENTA
+                    sqlBD.EjecutaSQLComando(sql);
+                    //ID_VENTA++;
+                    ID_TIEMPO++;
+                    ID_PRODUCTO++;
+                }
+                
+
+                
+            }
+
         }
         void pb(int valor)
         {
