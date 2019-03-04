@@ -52,6 +52,32 @@ namespace CuboBRO
             else
                 return true;
         }
+        public bool Existe(string id, string query)
+        {
+            SqlConnection sqlConn = new SqlConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(query, sqlConn);
+                sqlConn.ConnectionString = GetConnectionString();
+                cmd.Parameters.AddWithValue("Id", id);
+                sqlConn.Open();
+
+                count = Convert.ToInt32(cmd.ExecuteScalar());
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.ToString());
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+            if (count == 0)
+                return false;
+            else
+                return true;
+        }
 
         /// <summary> 
         /// Ejecuta un comando SQL 
