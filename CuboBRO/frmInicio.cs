@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,11 +22,13 @@ namespace CuboBRO
         {
             frmCargarDatos frmCargarDatos = new frmCargarDatos();
             frmCargarDatos.Show();
+
+
         }
 
         private void btnEjecutarETL_Click(object sender, EventArgs e)
         {
-            frmEjecutarETL frmEjecutarETL = new frmEjecutarETL();
+            frmEjecutarETLBodega frmEjecutarETL = new frmEjecutarETLBodega();
             frmEjecutarETL.Show();
         }
 
@@ -40,5 +43,7 @@ namespace CuboBRO
             frmConsultarCubo frmConsultarCubo = new frmConsultarCubo();
             frmConsultarCubo.Show();
         }
+
+        
     }
 }

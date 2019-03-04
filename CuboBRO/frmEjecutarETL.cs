@@ -5,29 +5,44 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CuboBRO
 {
-    public partial class frmEjecutarETL : Form
+    public partial class frmEjecutarETLBodega : Form
     {
         private int ID_VENTA = 0; // variables globales que se iran incrementando cada que se regsitren los tickets
         private int ID_TIEMPO = 0;
         private int ID_PRODUCTO = 0;
+        private bool cargado = false;
 
-        public frmEjecutarETL()
+        public frmEjecutarETLBodega()
         {
             InitializeComponent();
         }
 
         private void btnAceptarETL_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (!cargado) { 
+                ExtraccionDatos();
+                btnAceptarETL.Visible=false;
+                btnSalir.Visible = true;
+                cargado = true;
+            }
+           
         }
 
         private void frmEjecutarETL_Load(object sender, EventArgs e)
         {
+
+            
+           
+            
+        }
+
+        void ExtraccionDatos() {
             DataSet dsNeto = new DataSet();
             DataSet dsBodega = new DataSet();
             DataSet dsSoriana = new DataSet();
@@ -37,24 +52,20 @@ namespace CuboBRO
             if ((dsNeto.Tables.Count != 0) && (dsBodega.Tables.Count != 0) && (dsSoriana.Tables.Count != 0))
             {//verifica si tiene datos, se hace la carga.
                 TransformacionCargaDatosNeto(dsNeto); pb(50);
-                //TransformacionCargaDatosBodegaAurrera(dsBodega); pb(70);
+                TransformacionCargaDatosBodegaAurrera(dsBodega); pb(70);
             }
             else
             {
                 MessageBox.Show("No hay datos, se redireccionará a cargarlos", "NO HAY DATOS QUE PROCESAR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                frmCargarDatos frmCargarDatos = new frmCargarDatos();
+                frmCargarDatos.Show();
                 this.Close();
 
             }
             pb(100);
             //this.Close();
-        }
 
-        void ExtraccionDatos() {
 
-            //frmCargarDatos frmCargarDatos = new frmCargarDatos(); pb(2);
-            //frmCargarDatos.Show();
-           
-                        
         }
 
         void TransformacionCargaDatosNeto(DataSet dsNeto)
@@ -199,6 +210,11 @@ namespace CuboBRO
         void pb(int valor)
         {
             progressBar1.Value = valor;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
