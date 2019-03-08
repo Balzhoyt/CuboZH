@@ -17,6 +17,8 @@ namespace CuboBRO
         private int ID_TIEMPO = 0;
         private int ID_PRODUCTO = 0;
         private bool cargado = false;
+        private string categoria = "";
+        Categorias cat = new Categorias();
 
         public frmEjecutarETLBodega()
         {
@@ -114,7 +116,8 @@ namespace CuboBRO
 
                             if (!sqlBD.Existe(id_producto, "SELECT COUNT(*) FROM dimProducto WHERE id_producto = @Id"))//comrueba si el producto exite para ya no agregarlo
                             {
-                                sql = "insert into dimProducto(id_producto,nombre,categoria) values(" + id_producto + ",'" + producto + "','varios')";// REGISTRA EL PRODUCTO
+                                categoria = cat.getCategoria(producto);
+                                sql = "insert into dimProducto(id_producto,nombre,categoria) values(" + id_producto + ",'" + producto + "','"+categoria+"')";// REGISTRA EL PRODUCTO
                                 sqlBD.EjecutaSQLComando(sql);
                                 ID_PRODUCTO++; //incrementamos la variable global
                             }

@@ -41,7 +41,7 @@ namespace CuboBRO
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.ToString());
+               // MessageBox.Show(error.ToString());
             }
             finally
             {
@@ -67,7 +67,7 @@ namespace CuboBRO
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.ToString());
+              //  MessageBox.Show(error.ToString());
             }
             finally
             {
@@ -97,7 +97,7 @@ namespace CuboBRO
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.ToString());
+               // MessageBox.Show(error.ToString());
             }
             finally
             {
@@ -127,7 +127,7 @@ namespace CuboBRO
             catch (Exception error)
             {
 
-                MessageBox.Show(error.ToString()); 
+               // MessageBox.Show(error.ToString()); 
             }
             finally
             {
@@ -159,7 +159,7 @@ namespace CuboBRO
             }
             catch (System.Data.SqlClient.SqlException error)
             {
-                MessageBox.Show(error.ToString());
+                //MessageBox.Show(error.ToString());
             }
             cnn.Close();
             return ds;
@@ -178,8 +178,16 @@ namespace CuboBRO
             using (SqlDataAdapter sqlDA = new SqlDataAdapter(sqlCmd))
 
             {
-
-                sqlDA.Fill(dsRetorno);
+                try
+                {
+                      sqlDA.Fill(dsRetorno);
+                }
+                catch (System.Data.SqlClient.SqlException error)
+                {
+                    MessageBox.Show(error.ToString());
+                }
+                
+                
 
             }
 
