@@ -40,9 +40,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAceptarAlmacen = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dwvVentasCategorizadas = new System.Windows.Forms.DataGridView();
             this.btnVaciarAlmacen = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabControlVista.SuspendLayout();
             this.tpEsquema.SuspendLayout();
             this.tpSoriana.SuspendLayout();
@@ -50,6 +53,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dwvTiendas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dwvTiempo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dwvVentas)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dwvVentasCategorizadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVaciarAlmacen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +63,7 @@
             // 
             this.tabControlVista.Controls.Add(this.tpEsquema);
             this.tabControlVista.Controls.Add(this.tpSoriana);
+            this.tabControlVista.Controls.Add(this.tabPage1);
             this.tabControlVista.Font = new System.Drawing.Font("Arial", 12F);
             this.tabControlVista.Location = new System.Drawing.Point(2, 2);
             this.tabControlVista.Name = "tabControlVista";
@@ -203,6 +209,49 @@
             this.btnAceptarAlmacen.UseVisualStyleBackColor = false;
             this.btnAceptarAlmacen.Click += new System.EventHandler(this.btnAceptarAlmacen_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(81, 608);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Vaciar el almacen";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.dwvVentasCategorizadas);
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1207, 552);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Ventas Categorizadas";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label6.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(43, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(168, 17);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "   ventasCategorizadas   ";
+            // 
+            // dwvVentasCategorizadas
+            // 
+            this.dwvVentasCategorizadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dwvVentasCategorizadas.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dwvVentasCategorizadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dwvVentasCategorizadas.Location = new System.Drawing.Point(41, 48);
+            this.dwvVentasCategorizadas.Name = "dwvVentasCategorizadas";
+            this.dwvVentasCategorizadas.Size = new System.Drawing.Size(1123, 479);
+            this.dwvVentasCategorizadas.TabIndex = 13;
+            // 
             // btnVaciarAlmacen
             // 
             this.btnVaciarAlmacen.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -217,22 +266,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CuboBRO.Properties.Resources.esquemaCubo;
+            this.pictureBox1.Image = global::CuboBRO.Properties.Resources.esquemaCubo3;
             this.pictureBox1.Location = new System.Drawing.Point(6, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1139, 543);
+            this.pictureBox1.Size = new System.Drawing.Size(1201, 543);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(81, 608);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Vaciar el almacen";
             // 
             // frmVisualizarDW
             // 
@@ -257,6 +297,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dwvTiendas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dwvTiempo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dwvVentas)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dwvVentasCategorizadas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVaciarAlmacen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -281,5 +324,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btnVaciarAlmacen;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dwvVentasCategorizadas;
     }
 }

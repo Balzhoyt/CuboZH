@@ -42,12 +42,17 @@ namespace CuboBRO
             var index =cmbConsultas.SelectedIndex;
             switch (index)
             {
-                case 0:ventasPorTienda();break;
-                case 1: ventasMasAltas();break;
-                case 2: horasConMasVentas(); break;
+                case 0:ventasCategorizadas();break;
+                case 1: horasConMasVentas(); break;
                 default:
                     break;
             }
+        }
+
+        private void ventasCategorizadas()
+        {
+            var query = "select * from ventasCategorizadas order by id_venta";
+            dwvCubo.DataSource = sqlDB.DataSetSQL(query).Tables[0];//poblar el dw con culaquier consulta
         }
 
         private void horasConMasVentas()

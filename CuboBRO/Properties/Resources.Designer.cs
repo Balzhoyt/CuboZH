@@ -93,6 +93,36 @@ namespace CuboBRO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap esquemaCubo1 {
+            get {
+                object obj = ResourceManager.GetObject("esquemaCubo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap esquemaCubo2 {
+            get {
+                object obj = ResourceManager.GetObject("esquemaCubo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap esquemaCubo3 {
+            get {
+                object obj = ResourceManager.GetObject("esquemaCubo3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_XLS {
             get {
                 object obj = ResourceManager.GetObject("icono XLS", resourceCulture);

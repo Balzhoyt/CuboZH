@@ -118,17 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="XLS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\XLS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="texto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\texto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MENU PROCESOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MENU PROCESOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="basura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="esquemaCubo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\esquemaCubo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="proceso ETL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\proceso ETL.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="texto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\texto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="esquema" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\esquema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="esquemaCubo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\esquemaCubo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,25 +145,25 @@
   <data name="icono XLS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono XLS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="proceso ETL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\proceso ETL.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MENU PROCESOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MENU PROCESOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="texto2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\texto2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="XLS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XLS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pandas_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pandas_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="basura" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="texto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\texto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="esquemaCubo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\esquemaCubo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="esquema" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\esquema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="esquemaCubo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\esquemaCubo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

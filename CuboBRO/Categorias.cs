@@ -41,7 +41,7 @@ namespace CuboBRO
                 }
                 catch (Exception ex)
                 {
-                   
+                      
                 }
 
         }
@@ -63,7 +63,6 @@ namespace CuboBRO
                 }
             }
           
-
             return cat;
         }
 

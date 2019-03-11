@@ -63,7 +63,7 @@
             this.dwvCubo.Location = new System.Drawing.Point(13, 115);
             this.dwvCubo.Margin = new System.Windows.Forms.Padding(4);
             this.dwvCubo.Name = "dwvCubo";
-            this.dwvCubo.Size = new System.Drawing.Size(681, 363);
+            this.dwvCubo.Size = new System.Drawing.Size(1077, 363);
             this.dwvCubo.TabIndex = 7;
             this.dwvCubo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dwvVentas_CellContentClick);
             // 
@@ -84,10 +84,8 @@
             this.cmbConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbConsultas.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cmbConsultas.Items.AddRange(new object[] {
-            "VENTAS POR TIENDA",
-            "VENTAS MAS ALTAS",
-            "HORAS CON MAS VENTAS",
-            "CATEGORIAS MAS VENDIDAS"});
+            "VENTAS POR CATEGORIAS",
+            "HORAS CON MAS VENTAS"});
             this.cmbConsultas.Location = new System.Drawing.Point(147, 50);
             this.cmbConsultas.Margin = new System.Windows.Forms.Padding(4);
             this.cmbConsultas.Name = "cmbConsultas";
@@ -102,14 +100,14 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(716, 115);
+            this.chart1.Location = new System.Drawing.Point(1115, 115);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(745, 363);
+            this.chart1.Size = new System.Drawing.Size(582, 363);
             this.chart1.TabIndex = 10;
             this.chart1.Text = "chart1";
             // 
