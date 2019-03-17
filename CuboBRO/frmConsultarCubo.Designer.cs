@@ -85,7 +85,8 @@
             this.cmbConsultas.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cmbConsultas.Items.AddRange(new object[] {
             "VENTAS POR CATEGORIAS",
-            "HORAS CON MAS VENTAS"});
+            "VENTAS TOTALES POR CATEGORIAS",
+            "VENTAS TIENDAS POR CATEGORIAS"});
             this.cmbConsultas.Location = new System.Drawing.Point(147, 50);
             this.cmbConsultas.Margin = new System.Windows.Forms.Padding(4);
             this.cmbConsultas.Name = "cmbConsultas";

@@ -43,32 +43,34 @@ namespace CuboBRO
             switch (index)
             {
                 case 0:ventasCategorizadas();break;
-                case 1: horasConMasVentas(); break;
+                case 1:VentasCategorizadasTotal(); break;
+                case 2: VentasCategorizadasPorTienda(); break;
                 default:
                     break;
             }
         }
 
+        private void VentasCategorizadasPorTienda()
+        {
+            var query = "select * from vVentasCategorizadasPorTienda";
+            dwvCubo.DataSource = sqlDB.DataSetSQL(query).Tables[0];//poblar el dw con culaquier consulta
+        }
+
+        private void VentasCategorizadasTotal()
+        {
+            var query = "select * from vVentasCategorizadasTotal";
+            dwvCubo.DataSource = sqlDB.DataSetSQL(query).Tables[0];//poblar el dw con culaquier consulta
+        }
+
         private void ventasCategorizadas()
         {
-            var query = "select * from ventasCategorizadas order by id_venta";
+            var query = "select * from vVentasCategorizadas order by id_venta";
             dwvCubo.DataSource = sqlDB.DataSetSQL(query).Tables[0];//poblar el dw con culaquier consulta
         }
 
-        private void horasConMasVentas()
-        {
-            var query = "select * from vVentasTiendas";
-            dwvCubo.DataSource = sqlDB.DataSetSQL(query).Tables[0];//poblar el dw con culaquier consulta
+        
 
-            
-        }
-
-        private void ventasMasAltas()
-        {
-            var query = "select * from vVentasTiendas";
-            dwvCubo.DataSource = sqlDB.DataSetSQL(query).Tables[0];//poblar el dw con culaquier consulta
-        }
-
+       
        
         private void ventasPorTienda()
         {
