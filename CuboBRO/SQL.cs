@@ -22,7 +22,7 @@ namespace CuboBRO
         /// <returns>string de Conexión a la Base de Datos</returns> 
         public string GetConnectionString()
         {
-            return "Data Source = ALIENWARE-BRO; Initial Catalog = TiendasMisantlaDW; Integrated Security = True";
+            return "Data Source = (local); Initial Catalog = TiendasMisantlaDW; Integrated Security = True";
         }
 
         int count;

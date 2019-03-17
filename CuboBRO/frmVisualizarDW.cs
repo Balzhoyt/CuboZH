@@ -33,7 +33,7 @@ namespace CuboBRO
             dwvProductos.DataSource= sqlDB.DataSetSQL("SELECT * FROM dimProducto ORDER BY id_producto").Tables[0];//obtener los datos de la tabla dimProductos
             dwvTiempo.DataSource = sqlDB.DataSetSQL("SELECT * FROM dimTiempo ORDER BY id_tiempo").Tables[0];//obtener los datos de la tabla dimTiempo
             dwvVentas.DataSource = sqlDB.DataSetSQL("SELECT * FROM vVentas ORDER BY id_venta").Tables[0];//obtener los datos de la vista vVentas
-            dwvVentasCategorizadas.DataSource = sqlDB.DataSetSQL("SELECT * FROM ventasCategorizadas ORDER BY id_venta").Tables[0];//obtener los datos de la vista vVentas
+            dwvVentasCategorizadas.DataSource = sqlDB.DataSetSQL("SELECT * FROM vVentasCategorizadas ORDER BY id_venta").Tables[0];//obtener los datos de la vista vVentas
         }
 
         private void btnVaciarAlmacen_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace CuboBRO
 
                 //Eliminamos todos los registros del almacen con un procedimiento almacenmado
                 SQL sqlDB = new SQL();
-                var var = sqlDB.EjecutaSQLScalar("exec VaciarAlmacen");
+                var var = sqlDB.EjecutaSQLScalar("exec paVaciarAlmacen");
             }
 
                     
