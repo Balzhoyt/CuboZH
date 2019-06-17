@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ItemSetsDataGridView = new System.Windows.Forms.DataGridView();
-            this.ItemSet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemSetLabel = new System.Windows.Forms.Label();
             this.RulesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Support = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemSet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ItemSetsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RulesDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -56,36 +56,22 @@
             this.ItemSetsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemSet,
             this.Count});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ItemSetsDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ItemSetsDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.ItemSetsDataGridView.Location = new System.Drawing.Point(15, 36);
             this.ItemSetsDataGridView.Name = "ItemSetsDataGridView";
             this.ItemSetsDataGridView.ReadOnly = true;
             this.ItemSetsDataGridView.RowHeadersVisible = false;
             this.ItemSetsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ItemSetsDataGridView.Size = new System.Drawing.Size(273, 161);
+            this.ItemSetsDataGridView.Size = new System.Drawing.Size(568, 199);
             this.ItemSetsDataGridView.TabIndex = 0;
             this.ItemSetsDataGridView.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // ItemSet
-            // 
-            this.ItemSet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ItemSet.HeaderText = "Item Set";
-            this.ItemSet.Name = "ItemSet";
-            this.ItemSet.ReadOnly = true;
-            // 
-            // Count
-            // 
-            this.Count.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Count.HeaderText = "Count";
-            this.Count.Name = "Count";
-            this.Count.ReadOnly = true;
             // 
             // ItemSetLabel
             // 
@@ -115,42 +101,62 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.Support});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RulesDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RulesDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.RulesDataGridView.Location = new System.Drawing.Point(15, 217);
             this.RulesDataGridView.Name = "RulesDataGridView";
             this.RulesDataGridView.ReadOnly = true;
             this.RulesDataGridView.RowHeadersVisible = false;
             this.RulesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RulesDataGridView.Size = new System.Drawing.Size(273, 161);
+            this.RulesDataGridView.Size = new System.Drawing.Size(568, 199);
             this.RulesDataGridView.TabIndex = 2;
+            this.RulesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RulesDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Rule";
+            this.dataGridViewTextBoxColumn1.FillWeight = 165.542F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Regla";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Confidance";
+            this.dataGridViewTextBoxColumn2.FillWeight = 58.31582F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Confianza";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // Support
             // 
             this.Support.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Support.HeaderText = "Support";
+            this.Support.FillWeight = 76.14214F;
+            this.Support.HeaderText = "Soporte";
             this.Support.Name = "Support";
             this.Support.ReadOnly = true;
+            // 
+            // ItemSet
+            // 
+            this.ItemSet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemSet.FillWeight = 98.47716F;
+            this.ItemSet.HeaderText = "Item Set";
+            this.ItemSet.Name = "ItemSet";
+            this.ItemSet.ReadOnly = true;
+            // 
+            // Count
+            // 
+            this.Count.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Count.FillWeight = 101.5228F;
+            this.Count.HeaderText = "Frecuencia";
+            this.Count.Name = "Count";
+            this.Count.ReadOnly = true;
             // 
             // TableUserControl
             // 
@@ -163,7 +169,7 @@
             this.Controls.Add(this.ItemSetsDataGridView);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "TableUserControl";
-            this.Size = new System.Drawing.Size(303, 392);
+            this.Size = new System.Drawing.Size(598, 430);
             ((System.ComponentModel.ISupportInitialize)(this.ItemSetsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RulesDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -174,12 +180,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView ItemSetsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemSet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
         private System.Windows.Forms.Label ItemSetLabel;
         private System.Windows.Forms.DataGridView RulesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Support;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
     }
 }

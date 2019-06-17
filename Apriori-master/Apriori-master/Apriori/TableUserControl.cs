@@ -40,8 +40,8 @@ namespace Apriori
         public TableUserControl(List<string> Values)
         {
             InitializeComponent();
-            ItemSetLabel.Text = "Transactions";
-            ItemSetsDataGridView.Columns[0].Name = "TransactionID";
+            ItemSetLabel.Text = "Transacciones";
+            ItemSetsDataGridView.Columns[0].Name = "TransaccionID";
             ItemSetsDataGridView.Columns[1].Name = "Items";
             for (int i = 0; i < Values.Count; i++)
             {
@@ -54,6 +54,11 @@ namespace Apriori
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             ItemSetsDataGridView.ClearSelection();
+        }
+
+        private void RulesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

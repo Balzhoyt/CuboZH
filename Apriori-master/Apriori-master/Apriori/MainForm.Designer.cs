@@ -47,7 +47,7 @@
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 384);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(865, 371);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // trackBar1
@@ -70,18 +70,19 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(698, 403);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Support {0}";
+            this.label1.Text = "Soporte = {0}";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // LoadFromFileButton
             // 
             this.LoadFromFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LoadFromFileButton.Location = new System.Drawing.Point(12, 412);
+            this.LoadFromFileButton.Location = new System.Drawing.Point(12, 389);
             this.LoadFromFileButton.Name = "LoadFromFileButton";
-            this.LoadFromFileButton.Size = new System.Drawing.Size(106, 23);
+            this.LoadFromFileButton.Size = new System.Drawing.Size(140, 46);
             this.LoadFromFileButton.TabIndex = 4;
-            this.LoadFromFileButton.Text = "Load From File";
+            this.LoadFromFileButton.Text = "Cargar Archivo";
             this.LoadFromFileButton.UseVisualStyleBackColor = true;
             this.LoadFromFileButton.Click += new System.EventHandler(this.LoadFromFile_Click);
             // 
@@ -91,7 +92,7 @@
             this.RefreshButton.Enabled = false;
             this.RefreshButton.Location = new System.Drawing.Point(12, 441);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(106, 23);
+            this.RefreshButton.Size = new System.Drawing.Size(140, 23);
             this.RefreshButton.TabIndex = 5;
             this.RefreshButton.Text = "Refresh";
             this.RefreshButton.UseVisualStyleBackColor = true;
@@ -101,7 +102,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = global::Apriori.Properties.Resources.loader;
-            this.pictureBox1.Location = new System.Drawing.Point(124, 412);
+            this.pictureBox1.Location = new System.Drawing.Point(158, 403);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 52);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -124,9 +125,10 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Apriori";
+            this.Text = "Reglas de Asociacion. Apriori";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

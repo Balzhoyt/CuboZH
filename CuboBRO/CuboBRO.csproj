@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArchivoApriori.cs" />
     <Compile Include="Categorias.cs" />
     <Compile Include="frmCargarDatos.cs">
       <SubType>Form</SubType>
@@ -197,6 +198,16 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Apriori-master\Apriori-master\Apriori\Apriori.csproj">
+      <Project>{772010d4-92f9-43fb-9c01-3094a36e8900}</Project>
+      <Name>Apriori</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apriori-master\Apriori-master\BAL\BAL.csproj">
+      <Project>{89ad7e1c-4481-41f9-bc93-8c16b3beba28}</Project>
+      <Name>BAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

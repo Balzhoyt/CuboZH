@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using BAL;
+using Apriori;
+using System.IO;
 
 namespace CuboBRO
 {
@@ -64,8 +67,27 @@ namespace CuboBRO
 
         private void ventasCategorizadas()
         {
+            string path = "D:/TransaccionesCUBOZH.txt";
             var query = "select * from vVentasCategorizadas order by id_venta";
             dwvCubo.DataSource = sqlDB.DataSetSQL(query).Tables[0];//poblar el dw con culaquier consulta
+            var producto = "";
+            var productotemp = "";
+            for (int i = 0; i < dwvCubo.RowCount-1; i++)
+            {
+                for (int j = 3; j < dwvCubo.ColumnCount-1; j++)
+                {
+                    var dato = int.Parse(dwvCubo[j, i].Value.ToString());
+                    if (dato!=0)
+                    {
+                        productotemp = dwvCubo.Columns[j].Name.ToString();
+                        producto = producto + " " + productotemp;
+                    } 
+                }
+                File.AppendAllLines(path, new String[] { producto });
+                producto = "";
+            }
+           
+
         }
 
         
@@ -109,5 +131,15 @@ namespace CuboBRO
            }
            */
         }
+
+        private void btnCrearReglas_Click(object sender, EventArgs e)
+        {
+            
+            MainForm frmApriori = new MainForm();
+            frmApriori.Show();
+
+        }
+
+
     }
 }

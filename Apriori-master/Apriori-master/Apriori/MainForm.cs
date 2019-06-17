@@ -21,6 +21,7 @@ namespace Apriori
         {
             InitializeComponent();
             label1.Text = string.Format("Support {0}", trackBar1.Value + 1);
+            
         }
         string FileName = string.Empty;
         private void LoadFromFile_Click(object sender, EventArgs e)
@@ -137,7 +138,7 @@ namespace Apriori
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            label1.Text = string.Format("Support {0}", trackBar1.Value + 1);
+            label1.Text = string.Format("Soporte = {0}", trackBar1.Value + 1);
             DoThingThread();
         }
         List<Thread> threads = new List<Thread>();
@@ -178,6 +179,21 @@ namespace Apriori
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             AbortThread();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            FileName = "D:/TransaccionesCUBOZH.txt";
+            // DoThingThread();
+            trackBar1.Enabled = true;
+            DoThingThread();
+            RefreshButton.Enabled = true;
+
         }
     }
 }
